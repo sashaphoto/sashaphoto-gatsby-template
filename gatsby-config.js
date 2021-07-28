@@ -5,6 +5,8 @@ module.exports = {
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
+  //TODO https://www.gatsbyjs.com/plugins/gatsby-plugin-google-gtag/ Add analytics tracking
+  //TODO https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/how-gatsby-works-with-github-pages/ gitHub pages
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
