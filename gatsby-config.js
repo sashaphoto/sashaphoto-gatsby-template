@@ -2,6 +2,8 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+console.log(process.env.GITHUBTEST || 'no var from GH');
+
 module.exports = {
   pathPrefix: "/sashaphoto-gatsby-template",
   siteMetadata: {
