@@ -7,8 +7,8 @@ export interface HeaderProps{
 
 const Header: React.FC<HeaderProps> = ({ siteTitle }) => (
   <header
+    className={'Header'}
     style={{
-      background: `rebeccapurple`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -23,9 +23,9 @@ const Header: React.FC<HeaderProps> = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `white`,
             textDecoration: `none`,
           }}
+          className={'BaseColor'}
         >
           {siteTitle}
         </Link>
