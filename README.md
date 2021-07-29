@@ -14,3 +14,6 @@ Simply specify a personal access token with repo access in your repository secre
 
 ### Automatic Google Analytics
 Just specify your GTAG ID in GitHub secrets under `GATRACKINGID` and optionally `AWCONVERSIONID`, `DCFLOODIGHTID` to get started tracking your analytics.
+
+# Read the Full Docs
+Browse to the [deployed verison](https://sashaphoto.github.io/sashaphoto-gatsby-template/) of this site to see the template in action and read about how to use it!
