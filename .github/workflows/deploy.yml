@@ -15,6 +15,7 @@ jobs:
           GATRACKINGID:  ${{ secrets.GATRACKINGID }}
           AWCONVERSIONID:  ${{ secrets.AWCONVERSIONID }}
           DCFLOODIGHTID:  ${{ secrets.DCFLOODIGHTID }}
+          GITHUBTEST: 'hello from GH'
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
