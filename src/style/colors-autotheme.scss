@@ -217,6 +217,9 @@ $palette-diffs: palette-diff($base-palette);
   @each $name, $hex in $palette {
     &-#{$palette-name}-#{$name} {
       color: $hex;
+      -webkit-background-clip: unset;
+      -webkit-text-fill-color: unset;
+      background: none;
     }
   }
 }

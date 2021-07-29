@@ -7,7 +7,7 @@ export interface HeaderProps{
 
 const Header: React.FC<HeaderProps> = ({ siteTitle }) => (
   <header
-    className={'Header'}
+    className={'background-complement-lightest Header'}
     style={{
       marginBottom: `1.45rem`,
     }}
@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ siteTitle }) => (
           style={{
             textDecoration: `none`,
           }}
-          className={'BaseColor'}
+          className={'color-accent-darkest'}
         >
           {siteTitle}
         </Link>

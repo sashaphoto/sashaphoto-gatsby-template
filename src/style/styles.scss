@@ -5,6 +5,18 @@
 
 $border-radius: 2px;
 
+.ShowPalette {
+  @include draw-palette($accent);
+}
+
+.ShowComplementPalette {
+  @include draw-palette($complement);
+}
+
+.Magic {
+  @include SweepBackground(linear-gradient(90deg, base($accent-palette), base($complement-palette)));
+}
+
 html {
   color: var(--text-main);
   background-color: var(--base-color);
@@ -23,10 +35,6 @@ mark {
   color: base($complement-palette);
 }
 
-.Header {
-  background: darker($accent-palette);
-}
-
 .BaseColor {
   color: var(--text-main);
   -webkit-background-clip: unset;
@@ -34,14 +42,9 @@ mark {
   background: none;
 }
 
-.ShowPalette {
-  @include draw-palette($accent);
+.Header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
-.ShowComplementPalette {
-  @include draw-palette($complement);
-}
-
-.Magic {
-  @include SweepBackground(linear-gradient(90deg, base($accent-palette), base($complement-palette)));
-}
