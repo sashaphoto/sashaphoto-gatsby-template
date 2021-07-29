@@ -10,4 +10,7 @@ Styled with sass!
 You can specify colors in `colors.scss` and then it will automatically generate color palettes from them for you!
 
 ### Auto deploy to GH pages
-Simply specify a personal access token with repo access in your repository secrets when you use this template and it should automatically publish to GitHub Pages on each push :)
+Simply specify a personal access token with repo access in your repository secrets as `ACCESS_TOKEN` when you use this template and it should automatically publish to GitHub Pages on each push :)
+
+### Automatic Google Analytics
+Just specify your GTAG ID in GitHub secrets under `GATRACKINGID` and optionally `AWCONVERSIONID`, `DCFLOODIGHTID` to get started tracking your analytics.
