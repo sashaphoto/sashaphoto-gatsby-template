@@ -31,9 +31,17 @@ const AboutStyling: React.FC<PageProps<DataProps>> = ({ data, path }) => (
     <p>Your probably have some colour you want to use as your accent color. Simply set it as <code>$accent</code> in <code>colors.scss</code> and your palette will be built for you.</p>
     <h4>Generated Colours</h4>
     <p>The base colour automatically generates an <b>accent colour</b>, which is accessed as <code>$complement</code>. Both of these colours generate <i>palettes</i>, <code>$accent-palette</code> & <code>$complement-palette</code></p>
-    <h4>Using a palette</h4>
-    <p>To use the palette defined by your base color, you can use one of the getter functions for a colour, such as <code>base($accent-palette)</code> or  <code>darker($accent-palette)</code>. Available tones for a palette are <code className={'ShowPalette'}>lightest, lighter, light, base, dark, darker, darkest</code></p>
-      <hr/>    <h3>Different files explained</h3>
+    Available tones for a palette are <code className={'background-accent-lightest'}>lightest</code>, <code className={'background-accent-lighter'}>lighter</code>, <code className={'background-accent-light'}>light</code>, <code className={'background-accent-base'}>base</code>, <code className={'background-accent-dark'}>dark</code>,  <code className={'background-accent-darker'}>darker</code>, <code className={'background-accent-darkest'}>darkest</code>
+    <h4>Using a palette in SCSS</h4>
+    <p>To use the palette defined by your base color, you can use one of the getter functions for a colour, such as <code>base($accent-palette)</code> or  <code>darker($accent-palette)</code>.</p>
+    <h4>Using a palette in HTML / JSX</h4>
+    <p>Classnames are auto generated for your accent and complement palette as <code>(background || color)-(name of palette)-(tone)</code>, for example <code className={'background-accent-light'}>background-accent-light</code> or <code className={'color-complement-base'}>color-complement-base</code></p>
+    <h4>Adding a palette</h4>
+    <p>If you need to go above and beyond the accent and complement, you can add another palette with full functionality by first assigning it to a variable in the same place in <code>colors-autotheme.scss</code> as <code>$accent-palette</code> & <code>$complement-palette</code> (line 232) and then adding the <code>@include</code> for your theme under <code>.color</code> and <code>.background</code> in the same way as it is done for accent and complement.</p>
+    <hr/>
+    <h4>Customizing base palette</h4>
+    <p>The palette is built by calculating offsets based on a starting "base palette". You can redefine this palette by changing <code>$base-palette</code> (line 58) of <code>colors-autotheme.scss</code></p>
+    <h3>Different files explained</h3>
     <ul>
       <li><code>animations.scss</code> defines keyframes and mixins for animated components</li>
       <li><code>colors.scss</code> defines all the color variables (including DARK THEME)</li>

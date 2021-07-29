@@ -14,6 +14,10 @@ a, Link {
   color: base($accent-palette);
 }
 
+code {
+  background: var(--background);
+}
+
 mark {
   background-color: base($accent-palette);
   color: base($complement-palette);

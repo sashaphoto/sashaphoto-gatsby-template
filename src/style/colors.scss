@@ -3,7 +3,7 @@ $complement: complement($accent);
 
 html {
   --border-dark: rgba(invert(var(--base-color)), 0.88);
-  --foreground: #c4c4c4;
+  --background: #c4c4c4;
   --base-color: #ffffff;
   --text-main: black;
 }
@@ -12,7 +12,7 @@ html {
   html {
     --base-color: #000000;
     --border-dark: rgba(invert(var(--base-color)), 0.88);
-    --foreground: #232323;
+    --background: #232323;
     --text-main: white;
   }
 }

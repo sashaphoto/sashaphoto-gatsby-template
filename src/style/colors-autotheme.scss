@@ -2,6 +2,9 @@
 
 // credit to  https://www.sitepoint.com/using-sass-build-color-palettes/
 
+
+$keys: 'lightest' 'lighter' 'light' 'base' 'dark' 'darker' 'darkest';
+
 /**
  * Function defining the difference between 2 colors
  *
@@ -117,7 +120,6 @@ $palette-diffs: palette-diff($base-palette);
  */
 @function palette($base-color) {
   $colors: create-palette($base-color);
-  $keys: 'lightest' 'lighter' 'light' 'base' 'dark' 'darker' 'darkest';
   $palette: ();
 
   @for $i from 1 through min(length($colors), length($keys)) {
@@ -211,5 +213,31 @@ $palette-diffs: palette-diff($base-palette);
 }
 
 
+@mixin palette-modifier-color($palette, $palette-name) {
+  @each $name, $hex in $palette {
+    &-#{$palette-name}-#{$name} {
+      color: $hex;
+    }
+  }
+}
+
+@mixin palette-modifier-background($palette, $palette-name) {
+  @each $name, $hex in $palette {
+    &-#{$palette-name}-#{$name} {
+      background: $hex;
+    }
+  }
+}
+
 $accent-palette: palette($accent);
 $complement-palette: palette($complement);
+
+.color {
+  @include palette-modifier-color($accent-palette, 'accent');
+  @include palette-modifier-color($complement-palette, 'complement');
+}
+
+.background {
+  @include palette-modifier-background($accent-palette, 'accent');
+  @include palette-modifier-background($complement-palette, 'complement');
+}
