@@ -7,5 +7,7 @@ All the components are .TSX
 Styled with sass!
 
 ### Auto color palettes
+You can specify colors in `colors.scss` and then it will automatically generate color palettes from them for you!
 
 ### Auto deploy to GH pages
+Simply specify a personal access token with repo access in your repository secrets when you use this template and it should automatically publish to GitHub Pages on each push :)
