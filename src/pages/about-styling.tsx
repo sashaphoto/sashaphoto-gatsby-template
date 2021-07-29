@@ -31,7 +31,7 @@ const AboutStyling: React.FC<PageProps<DataProps>> = ({ data, path }) => (
     <p>Your probably have some colour you want to use as your accent color. Simply set it as <code>$accent</code> in <code>colors.scss</code> and your palette will be built for you.</p>
     <h4>Generated Colours</h4>
     <p>The base colour automatically generates an <b>accent colour</b>, which is accessed as <code>$complement</code>. Both of these colours generate <i>palettes</i>, <code>$accent-palette</code> & <code>$complement-palette</code></p>
-    Available tones for a palette are <code className={'background-accent-lightest'}>lightest</code>, <code className={'background-accent-lighter'}>lighter</code>, <code className={'background-accent-light'}>light</code>, <code className={'background-accent-base'}>base</code>, <code className={'background-accent-dark'}>dark</code>,  <code className={'background-accent-darker'}>darker</code>, <code className={'background-accent-darkest'}>darkest</code>
+    <p>Available tones for a palette are <code className={'background-accent-lightest'}>lightest</code>, <code className={'background-accent-lighter'}>lighter</code>, <code className={'background-accent-light'}>light</code>, <code className={'background-accent-base'}>base</code>, <code className={'background-accent-dark'}>dark</code>,  <code className={'background-accent-darker'}>darker</code>, <code className={'background-accent-darkest'}>darkest</code></p>
     <h4>Using a palette in SCSS</h4>
     <p>To use the palette defined by your base color, you can use one of the getter functions for a colour, such as <code>base($accent-palette)</code> or  <code>darker($accent-palette)</code>.</p>
     <h4>Using a palette in HTML / JSX</h4>
