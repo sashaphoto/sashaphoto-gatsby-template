@@ -25,13 +25,16 @@ const AboutStyling: React.FC<PageProps<DataProps>> = ({ data, path }) => (
     </p>
     <hr/>
     <h3>Auto-pallettes</h3>
-    <div style={{width: '100%', height: '40px', marginBlockEnd: '10px'}} className={'ShowPalette'}>    </div>
-    <div style={{width: '100%', height: '40px', marginBlockEnd: '10px'}} className={'ShowComplementPalette'}>    </div>
     <h4>Setting the base color</h4>
     <p>Your probably have some colour you want to use as your accent color. Simply set it as <code>$accent</code> in <code>colors.scss</code> and your palette will be built for you.</p>
     <h4>Generated Colours</h4>
-    <p>The base colour automatically generates an <b>accent colour</b>, which is accessed as <code>$complement</code>. Both of these colours generate <i>palettes</i>, <code>$accent-palette</code> & <code>$complement-palette</code></p>
+    <p>Your specified <code className={'background-accent-base'}>$accent</code> is used to generate a <code className={'background-complement-base'}>$complement</code>. Both of these colours generate <b>palettes</b>, <code className={'ShowPalette'}>$accent-palette</code> & <code className={'ShowComplementPalette'}>$complement-palette</code></p>
     <p>Available tones for a palette are <code className={'background-accent-lightest'}>lightest</code>, <code className={'background-accent-lighter'}>lighter</code>, <code className={'background-accent-light'}>light</code>, <code className={'background-accent-base'}>base</code>, <code className={'background-accent-dark'}>dark</code>,  <code className={'background-accent-darker'}>darker</code>, <code className={'background-accent-darkest'}>darkest</code></p>
+    <h4>Your current palettes</h4>
+    <b className={'color-accent-base'}>Accent</b>
+    <div style={{width: '100%', height: '40px', marginBlockEnd: '10px'}} className={'ShowPalette'}>    </div>
+    <b className={'color-complement-base'}>Complement</b>
+    <div style={{width: '100%', height: '40px', marginBlockEnd: '10px'}} className={'ShowComplementPalette'}>    </div>
     <h4>Using a palette in SCSS</h4>
     <p>To use the palette defined by your base color, you can use one of the getter functions for a colour, such as <code>base($accent-palette)</code> or  <code>darker($accent-palette)</code>.</p>
     <h4>Using a palette in HTML / JSX</h4>
