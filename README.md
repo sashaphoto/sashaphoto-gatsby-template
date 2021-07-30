@@ -27,7 +27,7 @@ Change out `sashaphoto-gatsby-template` for the name of your repository, or to b
 Go to settings -> secrets in your repository and set:
 
 - `ACCESS_TOKEN` to an [access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) with repo access
--  `GATRACKINGID` the [GTAG ID](https://developers.google.com/analytics/devguides/collection/gtagjs) for your Google Analytics tracking
+-  `GATRACKINGID` to the [GTAG ID](https://developers.google.com/analytics/devguides/collection/gtagjs) for your Google Analytics tracking
 
 For more analytics tracking, you can also set `DCFLOODIGHTID` and `AWCONVERSIONID`
 
