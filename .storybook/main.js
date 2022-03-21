@@ -10,18 +10,6 @@ module.exports = {
     // You can change the configuration based on that.
     // 'PRODUCTION' is used when building the static version of storybook.
 
-    // Make whatever fine-grained changes you need
-    config.module.rules.push({
-      test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader'],
-      include: path.resolve(__dirname, '../'),
-    });
-
-    config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
-    // Use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
-    config.module.rules[0].use[0].options.plugins.push(
-      path.resolve("babel-plugin-remove-graphql-queries")
-    );
     // Return the altered config
     return config;
   },
@@ -35,6 +23,7 @@ module.exports = {
     "@storybook/addon-interactions",
     "@storybook/builder-webpack5",
     "storybook-addon-gatsby",
+    "@storybook/preset-scss"
   ],
   "framework": "@storybook/react"
 }

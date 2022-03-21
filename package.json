@@ -40,10 +40,12 @@
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
     "@storybook/addon-links": "^6.4.19",
+    "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.4.19",
     "@storybook/testing-library": "^0.0.9",
     "babel-loader": "^8.2.3",
-    "prettier": "2.6.0"
+    "prettier": "2.6.0",
+    "sass-loader": "^12.6.0"
   },
   "keywords": [
     "gatsby"
