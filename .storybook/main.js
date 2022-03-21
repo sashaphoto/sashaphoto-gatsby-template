@@ -2,6 +2,9 @@ const path = require('path');
 
 
 module.exports = {
+  core: {
+    builder: "webpack5",
+  },
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     // You can change the configuration based on that.
@@ -17,7 +20,7 @@ module.exports = {
     config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
     // Use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
     config.module.rules[0].use[0].options.plugins.push(
-      require.resolve("babel-plugin-remove-graphql-queries")
+      path.resolve("babel-plugin-remove-graphql-queries")
     );
     // Return the altered config
     return config;
@@ -30,6 +33,7 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "@storybook/builder-webpack5",
     "storybook-addon-gatsby",
   ],
   "framework": "@storybook/react"
