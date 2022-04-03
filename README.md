@@ -20,6 +20,9 @@ Just specify your GTAG ID in GitHub secrets under `GATRACKINGID` and optionally 
 Analytics are tracked only in production builds with the IDs passed by GitHub actions or in `.env.production`
 
 # Usage
+**Note about .env**
+For local devlopment, you need to use .env files. To do this, `yarn add dotenv`
+
 ## Setup Your Repo Name
 Change out `sashaphoto-gatsby-template` for the name of your repository, or to be blank if you are using a custom domain.
 
